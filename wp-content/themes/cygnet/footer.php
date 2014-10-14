@@ -1,34 +1,19 @@
-			<footer class="footer" role="contentinfo">
+    <footer>
+      <div class="container">
 
-				<div id="inner-footer" class="wrap cf">
+        <div class="row">
+          <div class="span12">
+            <ul class="list-inline text-white">
+              <li><a href="<?php echo home_url(); ?>" class="logo-footer">Logo</a></li>
+              <li><small>&copy; <?php echo date('Y'); ?></small></li>
+            </ul>
+          </div>
+        </div>
 
-					<nav role="navigation">
-						<?php wp_nav_menu(array(
-    					'container' => '',                              // remove nav container
-    					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
-    					'menu' => __( 'Footer Links', 'bonestheme' ),   // nav name
-    					'menu_class' => 'nav footer-nav cf',            // adding custom nav class
-    					'theme_location' => 'footer-links',             // where it's located in the theme
-    					'before' => '',                                 // before the menu
-        			'after' => '',                                  // after the menu
-        			'link_before' => '',                            // before each link
-        			'link_after' => '',                             // after each link
-        			'depth' => 0,                                   // limit the depth of the nav
-    					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
-						)); ?>
-					</nav>
+      </div>
+    </footer>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+    <?php wp_footer(); ?>
 
-				</div>
-
-			</footer>
-
-		</div>
-
-		<?php // all js scripts are loaded in library/bones.php ?>
-		<?php wp_footer(); ?>
-
-	</body>
-
-</html> <!-- end of site. what a ride! -->
+  </body>
+</html>
