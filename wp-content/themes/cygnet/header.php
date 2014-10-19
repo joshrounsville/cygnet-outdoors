@@ -39,23 +39,33 @@
 
         <div class="row">
           <div class="span12">
-            <a href="<?php echo home_url(); ?>" class="logo">Logo</a>
             <nav class="nav nav-main">
+              <a href="#" class="connect">Connect</a>
               <?php wp_nav_menu(array(
                 'container' => false,
                 'container_class' => '',
                 'menu' => __( 'The Main Menu', 'bonestheme' ),
                 'menu_class' => '',
-                'theme_location' => 'main-nav',
+                'theme_location' => '',
                 'before' => '',
                 'after' => '',
                 'link_before' => '',
                 'link_after' => '',
-                'depth' => 0
+                'depth' => 0,
+                'items_wrap' => '<ul>%3$s</ul>'
               )); ?>
             </nav>
           </div>
         </div>
 
+        <div class="row text-center">
+          <div class="span12">
+            <a href="<?php echo home_url(); ?>" class="logo">
+              <img src="<?php echo get_template_directory_uri(); ?>/library/img/logos/cygnet-outdoors.png" alt="Cygnet Outdoors" width="278" height="167">
+            </a>
+          </div>
+        </div>
+
       </div>
     </header>
+

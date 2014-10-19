@@ -5,19 +5,21 @@
 
 .btn {
   display: inline-block;
-  padding: 10px 32px 9px;
+  padding: 15px 32px 12px;
   text-align: center;
-  font-weight: 600;
   text-decoration: none;
   outline: 0;
   background: $colorBtn;
-  color: $colorText;
+  color: $colorWhite;
   border: 1px solid $colorBtn;
+  text-transform: uppercase;
+  font-size: $fontLarge;
+  @include fontNorth();
   &:hover,
   &:focus {
-    background: #4d4d4d;
-    color: #fff;
-    border: 1px solid #4d4d4d;
+    background: darken( $colorBtn, 15% );
+    border-color: darken( $colorBtn, 15% );
+    color: $colorWhite;
   }
 
   &.btn--primary {
@@ -26,6 +28,14 @@
   }
   &.btn--secondary {
     font-size: $fontSmall;
-    padding: 8px 28px;
+  }
+
+  &.btn--block {
+    display: block;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  &.btn--min-width {
+    min-width: 300px;
   }
 }

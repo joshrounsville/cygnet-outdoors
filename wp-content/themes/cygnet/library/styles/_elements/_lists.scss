@@ -31,3 +31,10 @@ ol {
     display: inline-block;
   }
 }
+
+.list-spacer-horz {
+  li {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}

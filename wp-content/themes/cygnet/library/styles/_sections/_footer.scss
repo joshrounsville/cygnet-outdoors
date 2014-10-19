@@ -1,3 +1,70 @@
 /* ==========================================================================
   Footer
 ========================================================================== */
+
+
+footer {
+  padding: 50px 0;
+}
+
+.nav-social {
+  color: $colorYellow;
+  @include fontNorthScript();
+  text-transform: lowercase;
+  font-size: $fontH2;
+  float: left;
+  li {
+    margin: 0 50px 0 0;
+  }
+  a {
+    @include fontNorth();
+    color: $colorWhite;
+    font-size: $fontBase;
+    margin-left: 5px;
+    &:hover,
+    &:focus {
+      color: $colorGreen;
+    }
+  }
+}
+
+.form-newsletter {
+  float: right;
+  text-align: right;
+  position: relative;
+  bottom: -10px;
+  @include fontNorth();
+  label {
+    color: $colorYellow;
+  }
+  input {
+    &[type=email],
+    &[type=text] {
+      @include fontNorthScript();
+      color: $colorYellow;
+      outline: 0;
+      border: none;
+      background: none;
+      background: url(../img/structure/line-distressed-white.png) no-repeat bottom center;
+      padding: 0 15px 5px;
+      position: relative;
+      top: -12px;
+      font-size: $fontH3;
+      @include placeholder($colorYellow);
+      min-width: 250px;
+      margin: 0 0 0 7px;
+    }
+    &[type=submit] {
+      outline: 0;
+      border: none;
+      background: none;
+      color: $colorWhite;
+      @include fontNorth();
+      transition: color 0.14s ease-in-out;
+      &:hover,
+      &:focus {
+        color: $colorGreen;
+      }
+    }
+  }
+}

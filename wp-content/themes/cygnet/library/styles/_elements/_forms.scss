@@ -4,7 +4,6 @@
 
 form {
   margin: 0;
-  @include placeholder(#ccc);
 }
 
 textarea {
@@ -39,6 +38,7 @@ textarea {
 button,
 input {
   line-height: normal;
+  transition: background 0.14s ease-in-out;
 }
 
 button,
@@ -80,6 +80,47 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+
+.input-style {
+  outline: 0;
+  border: none;
+  background: #fafff3;
+  @include fontRegular();
+  transition: background 0.14s ease-in-out;
+  color: $colorGrayDark;
+  @include placeholder($colorGrayDark);
+  padding: 15px;
+  font-size: $fontSmall;
+  display: block;
+  width: 100%;
+  &:hover,
+  &:focus {
+    background: $colorWhite;
+  }
+}
+
+textarea {
+  &.input-style {
+    height: 116px;
+  }
+}
+
+.form-row {
+  @include clearfix();
+}
+
+.form-col-left {
+  width: 50%;
+  float: left;
+  padding-right: 10px;
+}
+
+.form-col-right {
+  width: 50%;
+  float: right;
+  padding-left: 10px;
 }
 
 

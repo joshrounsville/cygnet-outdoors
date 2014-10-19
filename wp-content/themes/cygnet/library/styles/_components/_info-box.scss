@@ -1,0 +1,39 @@
+/* ==========================================================================
+  Info Box
+========================================================================== */
+
+
+.info-box {
+  @include clearfix();
+  display: flex;
+  align-items: stretch;
+  .left {
+    width: 70%;
+    background: $colorGray url(../img/backgrounds/feathers-three.png) center center;
+    color: $colorWhite;
+    .content-wrap {
+      padding: 25px 60px;
+    }
+  }
+  .right {
+    width: 30%;
+    background: $colorGreenDark;
+  }
+  .top {
+    background: #fffcf6;
+  }
+  .bottom {
+    background: $colorGreenDark;
+    h4 {
+      color: $colorYellow;
+      padding: 0;
+    }
+  }
+  h4 {
+    text-align: center;
+    padding: 0 0 15px;
+  }
+  .content-wrap {
+    padding: 25px 30px;
+  }
+}

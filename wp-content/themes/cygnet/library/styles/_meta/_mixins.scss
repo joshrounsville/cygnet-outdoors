@@ -9,8 +9,14 @@
   font-weight: normal;
 }
 
-@mixin fontHighlight() {
-  font-family: $fontHighlight;
+@mixin fontNorth() {
+  font-family: $fontNorth;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin fontNorthScript() {
+  font-family: $fontNorthScript;
   font-style: normal;
   font-weight: normal;
 }

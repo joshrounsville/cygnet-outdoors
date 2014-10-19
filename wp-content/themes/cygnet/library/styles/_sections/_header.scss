@@ -1,3 +1,38 @@
 /* ==========================================================================
   Header
 ========================================================================== */
+
+
+header {
+  .home & {
+    background: url(../img/backgrounds/header.jpg) no-repeat left center;
+    background-size: cover;
+    min-height: 100%;
+  }
+}
+
+.nav-main {
+  text-transform: uppercase;
+  font-size: $fontLarge;
+  padding: 25px 0 0;
+  a {
+    color: $colorGrayDark;
+    &:hover,
+    &:focus {
+      color: $colorGreen;
+    }
+  }
+  ul {
+    display: inline-block;
+    float: right;
+  }
+  li {
+    display: inline-block;
+    margin: 0 0 0 40px;
+  }
+}
+
+.logo {
+  position: relative;
+  top: -30px;
+}

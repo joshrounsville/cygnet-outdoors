@@ -37,6 +37,14 @@
   text-align: right;
 }
 
+.text-yellow {
+  color: $colorYellow;
+}
+
+.curved-text {
+  margin-bottom: -15px;
+}
+
 
 
 /*==========  BACKGROUND  ==========*/
@@ -46,7 +54,26 @@
 }
 
 .bg-gray {
-  background-color: $colorGrayLight;
+  background-color: $colorGray;
+}
+
+.bg-antlers {
+  background-image: url(../img/backgrounds/antlers.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg-blog {
+  background-image: url(../img/backgrounds/blog.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg-feather {
+  background-image: url(../img/backgrounds/feather.png);
+  background-repeat: no-repeat;
+  background-position: center 96%;
 }
 
 
@@ -63,6 +90,12 @@
 
 .flex-b-align {
   align-items: flex-end;
+}
+
+.align-center {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
 }
 
 

@@ -6,6 +6,11 @@ html, body, button {
   -webkit-font-smoothing: antialiased;
 }
 
+html, body {
+  height: 100%;
+  background: #000;
+}
+
 body {
   @include fontRegular();
   font-size: $fontBase;
@@ -23,7 +28,7 @@ p, ul, ol {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  @include fontHighlight();
+  @include fontNorth();
   line-height: $lineHeightHeader;
   text-rendering: optimizeLegibility;
 }
@@ -52,6 +57,14 @@ h6, .h6 {
   font-size: $fontH6;
 }
 
+.font-large {
+  font-size: $fontH1*3;
+}
+
+.font-script {
+  @include fontNorthScript();
+}
+
 .small,
 small {
   font-size: $fontSmall;
@@ -60,4 +73,22 @@ small {
 .strong,
 strong {
   font-weight: bold;
+}
+
+blockquote {
+  color: $colorWhite;
+  font-size: $fontLarge;
+  background: url(../img/structure/line-distressed-white.png) repeat-x top center;
+  padding: 0;
+  margin: 25px 0;
+  .quote {
+    padding: 25px 0 20px;
+    text-transform: uppercase;
+  }
+  .cite {
+    @include fontNorthScript();
+    color: #000;
+    font-size: $fontH2;
+    padding: 0;
+  }
 }

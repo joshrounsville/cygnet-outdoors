@@ -3,10 +3,17 @@
 
         <div class="row">
           <div class="span12">
-            <ul class="list-inline text-white">
-              <li><a href="<?php echo home_url(); ?>" class="logo-footer">Logo</a></li>
-              <li><small>&copy; <?php echo date('Y'); ?></small></li>
-            </ul>
+            <nav class="nav-social">
+              <ul class="list-inline">
+                <li>Twitter <a href="https://twitter.com/cygnetoutdoors" target="blank">@cygnetoutdoors</a></li>
+                <li>Facebook <a href="https://twitter.com/cygnetoutdoors" target="blank">@cygnetoutdoors</a></li>
+              </ul>
+            </nav>
+            <form action="#" class="form-newsletter">
+              <label for="subscribe">Subscribe</label>
+              <input type="email" id="subscribe" name="subscribe" placeholder="Your email address">
+              <input type="submit" value="OK">
+            </form>
           </div>
         </div>
 

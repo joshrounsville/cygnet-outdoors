@@ -7,42 +7,47 @@
 $xSmall: 555px !default;
 $small: 750px !default;
 $medium: 970px !default;
-$large: 1170px !default;
+$large: 1200px !default;
 
 
 /*==========  SPACING  ==========*/
 
-$padding: 20px;
+$padding: 30px;
 $margin: 50px;
 
 
 /*==========  COLORS  ==========*/
 
-$colorGray: #737373 !default;
-$colorGrayDark: #404040 !default;
+$colorGray: #313131 !default;
+$colorGrayDark: #40403d !default;
 $colorGrayLight: #bbb !default;
 
-$colorText: $colorGrayDark !default;
-$colorBtn: #333 !default;
+$colorWhite: #f9f0e0 !default;
+$colorYellow: #e2d9a1 !default;
+$colorGreen: #a2c6b0 !default;
+$colorGreenDark: #44513e !default;
 
+$colorText: $colorGrayDark !default;
+$colorBtn: $colorGreen !default;
 $colorLink: #333 !default;
 
 
 /*==========  FONTS  ==========*/
 
-$fontSmall: 13px !default;
-$fontBase: 16px  !default;
-$fontLarge: 20px !default;
+$fontSmall: 12px !default;
+$fontBase: 14px  !default;
+$fontLarge: 18px !default;
 
-$fontH1: 40px !default;
-$fontH2: 34px !default;
-$fontH3: 28px !default;
-$fontH4: 22px !default;
-$fontH5: 16px !default;
-$fontH6: 14px !default;
+$fontH1: 32px !default;
+$fontH2: 28px !default;
+$fontH3: 23px !default;
+$fontH4: 18px !default;
+$fontH5: 13px !default;
+$fontH6: 12px !default;
 
 $lineHeight: 1.5 !default;
 $lineHeightHeader: 1.2 !default;
 
-$fontRegular: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$fontHighlight: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$fontRegular: "OFL Sorts Mill Goudy", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$fontNorth: "True North", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$fontNorthScript: "True North Script", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
