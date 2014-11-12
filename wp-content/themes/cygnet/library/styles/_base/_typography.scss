@@ -35,14 +35,23 @@ h1, h2, h3, h4, h5, h6,
 
 .h1, h1 {
   font-size: $fontH1;
+  @include breakpoint(medium) {
+    font-size: $fontH1 - 5;
+  }
 }
 
 .h2, h2 {
   font-size: $fontH2;
+  @include breakpoint(medium) {
+    font-size: $fontH2 - 4;
+  }
 }
 
 .h3, h3 {
   font-size: $fontH3;
+  @include breakpoint(medium) {
+    font-size: $fontH3 - 4;
+  }
 }
 
 .h4, h4 {
@@ -57,8 +66,22 @@ h6, .h6 {
   font-size: $fontH6;
 }
 
-.font-large {
+.font-large-script {
   font-size: $fontH1*3;
+  @include breakpoint(medium) {
+    font-size: $fontH1*2.5;
+  }
+  @include breakpoint(medium) {
+    font-size: $fontH1*1.6;
+  }
+}
+
+.font-large {
+  font-size: $fontLarge;
+}
+
+.font-regular {
+  @include fontRegular();
 }
 
 .font-script {
@@ -75,14 +98,21 @@ strong {
   font-weight: bold;
 }
 
+em {
+  font-family: $fontItalic;
+  font-style: normal;
+}
+
 blockquote {
   color: $colorWhite;
   font-size: $fontLarge;
-  background: url(../img/structure/line-distressed-white.png) repeat-x top center;
   padding: 0;
   margin: 25px 0;
+  &.border-top {
+    background: url(../img/structure/line-distressed-white.png) repeat-x top center;
+  }
   .quote {
-    padding: 25px 0 20px;
+    padding: 10px 0 15px;
     text-transform: uppercase;
   }
   .cite {

@@ -28,7 +28,7 @@ $(function() {
 
 
   var $curvedText = $('.curved-text');
-  $curvedText.arctext({radius: 500})
+  $curvedText.arctext({radius: 1100});
 
 
 

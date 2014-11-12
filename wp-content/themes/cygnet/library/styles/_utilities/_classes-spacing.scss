@@ -9,15 +9,31 @@
   padding: $padding;
 }
 
+.pad--2x {
+  padding: $padding*2;
+
+  @include breakpoint(medium) {
+    padding: $padding;
+  }
+}
+
 
 .pad-v {
   padding-top: $padding;
   padding-bottom: $padding;
+  @include breakpoint(small) {
+    padding-top: $padding - 10;
+    padding-bottom: $padding;
+  }
 }
 
 .pad-v--2x {
   padding-top: $padding*2;
   padding-bottom: $padding*2;
+  @include breakpoint(small) {
+    padding-top: $padding - 10;
+    padding-bottom: $padding;
+  }
 }
 
 .pad-h {
@@ -31,10 +47,16 @@
 
 .pad-t {
   padding-top: $padding;
+  @include breakpoint(small) {
+    padding-top: $padding - 10;
+  }
 }
 
 .pad-t--2x {
   padding-top: $padding*2;
+  @include breakpoint(small) {
+    padding-top: $padding - 10;
+  }
 }
 
 .pad-t--20 {
@@ -55,10 +77,28 @@
 
 .pad-b {
   padding-bottom: $padding;
+
+  @include breakpoint(small) {
+    padding-bottom: $padding - 10;
+  }
 }
 
 .pad-b--2x {
   padding-bottom: $padding*2;
+  @include breakpoint(small) {
+    padding-bottom: $padding - 10;
+  }
+}
+
+.pad-b--3x {
+  padding-bottom: $padding*3;
+  @include breakpoint(small) {
+    padding-bottom: $padding - 10;
+  }
+}
+
+.pad-b--30 {
+  padding-bottom: 30px;
 }
 
 .pad-b--20 {

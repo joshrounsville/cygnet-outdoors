@@ -1,43 +1,21 @@
 <?php get_header(); ?>
 
-			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+  <section class="bg-gray pad-v">
+    <div class="container">
 
-					<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+      <div class="row">
+        <div class="span8 offset2 text-off-white text-center">
 
-						<article id="post-not-found" class="hentry cf">
+        	<h2 class="pad-b--10">Whoops...</h2>
+        	<p class="pad-b--20">We can't seem to find the page you're looking for. Our homepage might be a good place to start.</p>
+        	<a href="/" class="btn">Cygnet Homepage</a>
 
-							<header class="article-header">
+        </div>
+      </div>
 
-								<h1><?php _e( 'Epic 404 - Article Not Found', 'bonestheme' ); ?></h1>
+    </div>
+  </section>
 
-							</header>
-
-							<section class="entry-content">
-
-								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
-
-							</section>
-
-							<section class="search">
-
-									<p><?php get_search_form(); ?></p>
-
-							</section>
-
-							<footer class="article-footer">
-
-									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
-
-							</footer>
-
-						</article>
-
-					</div>
-
-				</div>
-
-			</div>
 
 <?php get_footer(); ?>

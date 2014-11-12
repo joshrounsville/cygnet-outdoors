@@ -5,7 +5,7 @@
 
 .btn {
   display: inline-block;
-  padding: 15px 32px 12px;
+  padding: 13px 32px 14px;
   text-align: center;
   text-decoration: none;
   outline: 0;
@@ -24,7 +24,7 @@
 
   &.btn--primary {
     font-size: $fontLarge;
-    padding: 13px 42px 12px;
+    padding: 13px 42px 14px;
   }
   &.btn--secondary {
     font-size: $fontSmall;
@@ -37,5 +37,20 @@
   }
   &.btn--min-width {
     min-width: 300px;
+  }
+
+  @include breakpoint(medium) {
+    &.btn--min-width {
+      min-width: 240px;
+    }
+  }
+  @include breakpoint(small) {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    &.btn--min-width {
+      min-width: 1px;
+    }
   }
 }

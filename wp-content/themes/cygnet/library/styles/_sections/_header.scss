@@ -4,35 +4,145 @@
 
 
 header {
-  .home & {
-    background: url(../img/backgrounds/header.jpg) no-repeat left center;
-    background-size: cover;
-    min-height: 100%;
+  background-repeat: no-repeat;
+  background-position: 20% top;
+  background-size: cover;
+  background-image: url(../img/backgrounds/header.jpg);
+  min-height: 100%;
+  .page-template-page-about-php & {
+    background-image: url(../img/backgrounds/about.jpg);
+  }
+  .blog & {
+    background-image: none;
+    min-height: 1px;
+  }
+  .post-type-archive-portfolio & {
+    min-height: 0;
+    background-image: none;
+    background-color: $colorGray;
+  }
+
+  .nav {
+    text-transform: uppercase;
+    font-size: $fontBase - 1;
+    letter-spacing: 1px;
+    @include fontRegular();
+    color: $colorGrayDark;
+    a {
+      color: $colorGrayDark;
+    }
+    .post-type-archive-portfolio & {
+      color: $colorWhite;
+      a {
+        color: $colorWhite;
+      }
+    }
+    ul {
+      display: inline-block;
+    }
+    li {
+      display: inline-block;
+    }
+  }
+
+  @include breakpoint(medium) {
+    background-position: 35% top;
+  }
+
+  @include breakpoint(small) {
+    background-position: 45% top;
+    min-height: 600px;
+    .page-template-page-about-php & {
+      min-height: 600px;
+    }
+    .nav {
+      ul {
+        float: none;
+      }
+    }
+    .nav-social {
+      display: none;
+    }
   }
 }
 
-.nav-main {
-  text-transform: uppercase;
-  font-size: $fontLarge;
-  padding: 25px 0 0;
+.nav-social {
+  float: left;
+  padding-top: 19px;
+  animation: fadeIn 0.3s 0.2s both;
+  li {
+    margin: 0 6px 0 0;
+    &:first-of-type {
+      margin: 0 10px 0 0;
+    }
+  }
   a {
-    color: $colorGrayDark;
+    font-size: $fontLarge + 2;
+    color: $colorWhite;
     &:hover,
     &:focus {
       color: $colorGreen;
     }
   }
+
+  @include breakpoint(small) {
+    display: block;
+    width: 100%;
+    li {
+      display: block;
+      margin: 0 0 10px;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.nav-main {
+  float: right;
+  animation: fadeIn 0.3s 0.1s both;
+  a {
+    color: $colorGrayDark;
+    display: block;
+    padding: 25px 15px 15px;
+    background: transparent;
+    &:hover,
+    &:focus {
+      color: $colorWhite;
+      background: $colorGrayXDark;
+    }
+  }
+  .current-menu-item {
+    a {
+      color: $colorWhite;
+      background: $colorGrayXDark;
+    }
+  }
   ul {
-    display: inline-block;
     float: right;
   }
-  li {
-    display: inline-block;
-    margin: 0 0 0 40px;
+  @include breakpoint(small) {
+    text-align: center;
+    float: none;
   }
 }
 
 .logo {
   position: relative;
   top: -30px;
+  display: block;
+  width: 208px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s 0.3s both;
+
+  @include breakpoint(large) {
+    width: 190px;
+  }
+  @include breakpoint(medium) {
+    width: 160px;
+  }
+  @include breakpoint(small) {
+    top: -5px;
+    width: 130px;
+  }
 }

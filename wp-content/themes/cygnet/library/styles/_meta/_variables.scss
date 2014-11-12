@@ -5,9 +5,9 @@
 
 /*==========  DEFINE BREAKPOINTS  ==========*/
 $xSmall: 555px !default;
-$small: 750px !default;
-$medium: 970px !default;
-$large: 1200px !default;
+$small: 740px !default;
+$medium: 950px !default;
+$large: 1170px !default;
 
 
 /*==========  SPACING  ==========*/
@@ -20,12 +20,14 @@ $margin: 50px;
 
 $colorGray: #313131 !default;
 $colorGrayDark: #40403d !default;
+$colorGrayXDark: #231f20 !default;
 $colorGrayLight: #bbb !default;
 
 $colorWhite: #f9f0e0 !default;
 $colorYellow: #e2d9a1 !default;
 $colorGreen: #a2c6b0 !default;
 $colorGreenDark: #44513e !default;
+$colorRed: #dd5445 !default;
 
 $colorText: $colorGrayDark !default;
 $colorBtn: $colorGreen !default;
@@ -36,11 +38,11 @@ $colorLink: #333 !default;
 
 $fontSmall: 12px !default;
 $fontBase: 14px  !default;
-$fontLarge: 18px !default;
+$fontLarge: 16px !default;
 
-$fontH1: 32px !default;
-$fontH2: 28px !default;
-$fontH3: 23px !default;
+$fontH1: 30px !default;
+$fontH2: 25px !default;
+$fontH3: 22px !default;
 $fontH4: 18px !default;
 $fontH5: 13px !default;
 $fontH6: 12px !default;
@@ -48,6 +50,7 @@ $fontH6: 12px !default;
 $lineHeight: 1.5 !default;
 $lineHeightHeader: 1.2 !default;
 
-$fontRegular: "OFL Sorts Mill Goudy", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$fontNorth: "True North", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$fontNorthScript: "True North Script", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$fontRegular: "Millgoudy", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$fontItalic: "Millgoudy-Italic", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$fontNorth: "TrueNorth", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$fontNorthScript: "TrueNorth-Script", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;

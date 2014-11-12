@@ -1,0 +1,83 @@
+/* ==========================================================================
+  Portfolio Wrap
+========================================================================== */
+
+
+.portfolio-wrap {
+  height: 466px;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid $colorGray;
+  &:hover,
+  &:focus {
+    .portfolio-hover-content {
+      opacity: 1;
+    }
+  }
+  .img-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.4;
+  }
+  h2 {
+    @include fontRegular();
+  }
+  .btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 7;
+  }
+}
+
+.portfolio-content,
+.portfolio-hover-content {
+  padding: 40px 30px 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.portfolio-content {
+  z-index: 3;
+  color: $colorWhite;
+}
+
+.portfolio-hover-content {
+  z-index: 5;
+  color: $colorGreenDark;
+  background: $colorGreen;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  h4 {
+    @include fontRegular();
+    padding: 0 0 15px;
+    font-size: 20px;
+  }
+}
+
+.portfolio-excerpt_wrap {
+  padding-bottom: 20px;
+  background: url(../img/structure/line-dotted-white.png) repeat-x bottom center;
+}
+
+.portfolio-meta {
+  position: absolute;
+  right: 30px;
+  bottom: 80px;
+  left: 30px;
+  li {
+    @include ellipsis();
+  }
+  span {
+    @include fontNorth();
+    padding: 0 5px 0 0;
+  }
+}

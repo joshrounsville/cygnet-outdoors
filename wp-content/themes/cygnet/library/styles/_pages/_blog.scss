@@ -1,0 +1,124 @@
+/* ==========================================================================
+  Blog
+========================================================================== */
+
+
+.blog {
+  background: url(../img/backgrounds/blog.jpg) no-repeat 20% top;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+  section {
+    background: transparent;
+  }
+}
+
+.blog-excerpt-list {
+  background: #fffbf3 url(../img/icons/trees-three-green.png) no-repeat;
+  background-position: center 98.5%;
+  background-position: center calc( 100% - 20px );
+  padding: $padding $padding $padding + 50;
+  position: relative;
+}
+
+.blog-item {
+  margin: 0 0 50px;
+  img {
+    margin: 0 0 20px;
+    width: 100%;
+  }
+  h3 {
+    @include fontRegular();
+    padding: 0 0 10px;
+  }
+}
+
+.blog-meta {
+  @include fontNorthScript();
+  font-size: $fontLarge;
+  display: block;
+  border-top: 1px solid $colorGrayLight;
+  border-bottom: 1px solid $colorGrayLight;
+  padding: 7px 0 4px 0;
+  margin: 0 0 20px;
+  li {
+    display: inline-block;
+    line-height: 0.6;
+  }
+  > li {
+    margin: 0 6px 0 0;
+    padding: 0 8px 0 0;
+    border-right: 1px solid $colorGray;
+    &:last-of-type {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+  }
+  a {
+    color: $colorRed;
+    font-size: $fontBase;
+    @include fontNorth();
+    &:hover,
+    &:focus {
+      color: $colorGray;
+    }
+  }
+  .font-regular {
+    color: $colorGray;
+    @include fontRegular();
+    &:hover,
+    &:focus {
+      color: $colorGrayLight;
+    }
+  }
+  span {
+    padding: 0 2px;
+  }
+}
+
+.post-categories {
+  display: inline-block;
+  li {
+    margin: 0 5px 0 0;
+  }
+}
+
+.blog-pagination {
+  position: relative;
+  bottom: -65px;
+  display: block;
+  text-transform: uppercase;
+  @include clearfix();
+  .previous {
+    float: left;
+    a {
+      &:hover,
+      &:focus {
+        i {
+          transform: translateX(-3px) rotate(-4deg);
+        }
+      }
+    }
+    i {
+      margin-right: 3px;
+    }
+  }
+  .next {
+    float: right;
+    a {
+      &:hover,
+      &:focus {
+        i {
+          transform: translateX(3px) rotate(4deg);
+        }
+      }
+    }
+    i {
+      margin-left: 3px;
+    }
+  }
+  i {
+    transition: transform 0.2s ease-in-out;
+  }
+}

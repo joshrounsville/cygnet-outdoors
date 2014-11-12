@@ -28,7 +28,7 @@ function bones_ahoy() {
   load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-  require_once( 'library/custom-post-types/example.php' );
+  require_once( 'library/custom-post-types/portfolio.php' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
@@ -73,8 +73,9 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'bones-thumb-600', 600, 150, true );
-add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size( 'blog-excerpt', 339, 182, true );
+add_image_size( 'blog-excerpt-large', 689, 330, true );
+add_image_size( 'portfolio-background', 360, 466, true );
 
 /*
 to add more sizes, simply copy a line from above
@@ -100,8 +101,9 @@ add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
 function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'bones-thumb-600' => __('600px by 150px'),
-        'bones-thumb-300' => __('300px by 100px'),
+        'blog-excerpt' => __('339px by 182px'),
+        'blog-excerpt-large' => __('689px by 330px'),
+        'portfolio-background' => __('360px by 466px')
     ) );
 }
 

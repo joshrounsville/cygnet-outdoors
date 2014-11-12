@@ -5,59 +5,39 @@
 		<div class="container">
 
 			<div class="row text-center pad-b">
-				<div class="span6 offset3">
+				<div class="span6 offset3 span-l-8 offset-l-2">
 					<i class="icon icon-swan-white"></i>
-					<blockquote>
+					<blockquote class="border-top">
 						<p class="quote">"The world is grand, awfully big and astonishingly beautiful, frequently thrilling."</p>
 						<p class="cite">-Dorothy Kilgallen</p>
 					</blockquote>
 				</div>
 			</div>
 
+			<?php $query = new WP_Query( array('posts_per_page' => 3) ); ?>
+      <?php if ( $query->have_posts() ) : ?>
+      <?php $i = 1; ?>
 			<div class="row">
-				<div class="span4">
-					<div class="blog-excerpt swan">
+      <?php while ($query->have_posts()) : $query->the_post(); ?>
+        <div class="span4 span-m-6<?php if ( $i == 3 ) : ?> tablet-hide<?php endif; ?>">
+					<div class="blog-excerpt excerpt-icon-<?php echo $i; ?>">
 						<div class="img-wrap">
-							<time>Nov<span>28</span></time>
-							<img src="<?php echo get_template_directory_uri(); ?>/library/img/placehold-1.jpg" alt="placeholder">
+							<time><?php the_time(M); ?><span><?php the_time(j); ?></span></time>
+							<?php the_post_thumbnail( 'blog-excerpt' ); ?>
 						</div>
 						<div class="content-wrap">
 							<i class="border"></i>
-							<h3>National Geographic Gives Women Hunters a Shout-out.</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							<?php the_excerpt(); ?>
 						</div>
-						<a href="#" class="btn btn--block read-more">Read More</a>
+						<a href="<?php the_permalink(); ?>" class="btn btn--block read-more">Read More</a>
 					</div>
 				</div>
-				<div class="span4">
-					<div class="blog-excerpt inkwell">
-						<div class="img-wrap">
-							<time>Nov<span>28</span></time>
-							<img src="<?php echo get_template_directory_uri(); ?>/library/img/placehold-2.jpg" alt="placeholder">
-						</div>
-						<div class="content-wrap">
-							<i class="border"></i>
-							<h3>National Geographic Gives Women Hunters a Shout-out.</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-						</div>
-						<a href="#" class="btn btn--block read-more">Read More</a>
-					</div>
-				</div>
-				<div class="span4">
-					<div class="blog-excerpt pen">
-						<div class="img-wrap">
-							<time>Nov<span>28</span></time>
-							<img src="<?php echo get_template_directory_uri(); ?>/library/img/placehold-3.jpg" alt="placeholder">
-						</div>
-						<div class="content-wrap">
-							<i class="border"></i>
-							<h3>National Geographic Gives Women Hunters a Shout-out.</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-						</div>
-						<a href="#" class="btn btn--block read-more">Read More</a>
-					</div>
-				</div>
-			</div>
+			<?php $i++; ?>
+      <?php endwhile; ?>
+      </div>
+      <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
 
 		</div>
 	</section>
@@ -70,7 +50,7 @@
 				<div class="span12">
 					<h3 class="pad-b--20">Blog</h3>
 					<i class="icon icon-x"></i>
-					<h3 class="curved-text font-script font-large">Latest Adventures</h3>
+					<h3 class="curved-text font-script font-large-script">Latest Adventures</h3>
 					<i class="icon icon-circle-scene"></i>
 				</div>
 			</div>
@@ -79,7 +59,7 @@
 	</section>
 
 
-	<section class="pad-v--2x bg-gray bg-feather">
+	<section class="pad-t--2x pad-b--3x bg-gray bg-texture bg-feather">
 		<div class="container">
 
 			<div class="row pad-b--2x">

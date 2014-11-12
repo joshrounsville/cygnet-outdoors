@@ -39,8 +39,15 @@
 
         <div class="row">
           <div class="span12">
+            <nav class="nav nav-social">
+              <ul>
+                <li>Connect</li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+            </nav>
             <nav class="nav nav-main">
-              <a href="#" class="connect">Connect</a>
               <?php wp_nav_menu(array(
                 'container' => false,
                 'container_class' => '',
@@ -61,8 +68,15 @@
         <div class="row text-center">
           <div class="span12">
             <a href="<?php echo home_url(); ?>" class="logo">
-              <img src="<?php echo get_template_directory_uri(); ?>/library/img/logos/cygnet-outdoors.png" alt="Cygnet Outdoors" width="278" height="167">
+              <?php if ( is_post_type_archive( 'portfolio' ) ) : ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/library/img/logos/cygnet-outdoors-light.png" alt="Cygnet Outdoors" width="208" height="125">
+              <?php else : ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/library/img/logos/cygnet-outdoors.png" alt="Cygnet Outdoors" width="208" height="125">
+              <?php endif; ?>
             </a>
+            <?php if ( is_page( 'about' ) ) : ?>
+              <h4 class="text-uppercase font-regular pad-t--10">About Bekah Klarr</h4>
+            <?php endif; ?>
           </div>
         </div>
 

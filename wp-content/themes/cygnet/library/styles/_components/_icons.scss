@@ -5,64 +5,120 @@
 
 .icon {
   display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon-arrow-down {
+  background-image: url(../img/icons/arrow-down.png);
+  width: 19px;
+  height: 93px;
 }
 
 .icon-circle-scene {
-  background: url(../img/icons/circle-scene-black.png) no-repeat center center;
+  background-image: url(../img/icons/circle-scene-black.png);
   width: 90px;
   height: 89px;
 }
 
 .icon-coffee-black {
-  background: url(../img/icons/coffee-black.png) no-repeat center center;
+  background-image: url(../img/icons/coffee-black.png);
   width: 43px;
   height: 83px;
 }
 
+.icon-coffee-green {
+  background-image: url(../img/icons/coffee-green.png);
+  width: 43px;
+  height: 83px;
+}
+
+.icon-facebook {
+  background-image: url(../img/icons/facebook.png);
+  width: 10px;
+  height: 22px;
+}
+
+.icon-google-plus {
+  background-image: url(../img/icons/google-plus.png);
+  width: 12px;
+  height: 21px;
+}
+
 .icon-inkwell-black {
-  background: url(../img/icons/inkwell-black.png) no-repeat center center;
+  background-image: url(../img/icons/inkwell-black.png);
   width: 56px;
   height: 71px;
 }
 
 .icon-pen-black {
-  background: url(../img/icons/pen-black.png) no-repeat center center;
+  background-image: url(../img/icons/pen-black.png);
   width: 97px;
   height: 59px;
 }
 
+.icon-nav-arrow-left {
+  background-image: url(../img/icons/nav-arrow-left.png);
+  width: 33px;
+  height: 10px;
+}
+
+.icon-nav-arrow-right {
+  background-image: url(../img/icons/nav-arrow-right.png);
+  width: 33px;
+  height: 10px;
+}
+
 .icon-swan-black {
-  background: url(../img/icons/swan-black.png) no-repeat center center;
+  background-image: url(../img/icons/swan-black.png);
   width: 67px;
   height: 53px;
 }
 
+.icon-swan-green {
+  background-image: url(../img/icons/swan-green.png);
+  width: 55px;
+  height: 44px;
+}
+
 .icon-swan-white {
-  background: url(../img/icons/swan-white.png) no-repeat center center;
+  background-image: url(../img/icons/swan-white.png);
   width: 67px;
   height: 53px;
 }
 
 .icon-tree-black {
-  background: url(../img/icons/tree-black.png) no-repeat center center;
+  background-image: url(../img/icons/tree-black.png);
   width: 31px;
   height: 55px;
 }
 
+.icon-tree-green {
+  background-image: url(../img/icons/tree-green.png);
+  width: 25px;
+  height: 45px;
+}
+
 .icon-trees-three-green {
-  background: url(../img/icons/trees-three-green.png) no-repeat center center;
+  background-image: url(../img/icons/trees-three-green.png);
   width: 98px;
   height: 60px;
 }
 
+.icon-twitter {
+  background-image: url(../img/icons/twitter.png);
+  width: 22px;
+  height: 16px;
+}
+
 .icon-woman-profile-black {
-  background: url(../img/icons/woman-profile-black.png) no-repeat center center;
+  background-image: url(../img/icons/woman-profile-black.png);
   width: 69px;
   height: 68px;
 }
 
 .icon-x {
-  background: url(../img/icons/x.png) no-repeat center center;
+  background-image: url(../img/icons/x.png);
   width: 18px;
   height: 20px;
 }

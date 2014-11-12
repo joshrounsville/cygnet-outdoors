@@ -263,7 +263,7 @@ function bones_filter_ptags_on_images($content){
 }
 
 function custom_excerpt_length( $length ) {
-  return 30;
+  return 44;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -271,7 +271,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 function bones_excerpt_more($more) {
   global $post;
   // edit here if you like
-  return '... <br><a class="read-more" href="'. get_permalink($post->ID) .'">'. __( 'Read more', 'bonestheme' ) .'</a>';
+  return '...';
 }
 
 

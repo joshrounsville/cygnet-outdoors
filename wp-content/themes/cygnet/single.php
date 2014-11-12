@@ -1,19 +1,27 @@
 <?php get_header(); ?>
 
 
-	<section>
+	<section class="bg-gray">
 		<div class="container">
 
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="row">
-				<div class="span12">
+				<div class="span8 offset2">
 
-					<h2><?php the_title(); ?></h2>
-					<?php the_content(); ?>
+					<div class="blog-wrap">
+
+						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<div class="blog-excerpt">
+
+							<h2><?php the_title(); ?></h2>
+							<?php the_content(); ?>
+						</div>
+
+						<?php endwhile; endif; ?>
+
+					</div>
 
 				</div>
 			</div>
-			<?php endwhile; endif; ?>
 
 		</div>
 	</section>
