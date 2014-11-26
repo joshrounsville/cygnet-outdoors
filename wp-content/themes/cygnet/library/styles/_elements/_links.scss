@@ -13,3 +13,50 @@ a {
   }
 }
 
+.link-white {
+  color: $colorWhite;
+  &:hover,
+  &:focus {
+    color: $colorGreen;
+  }
+}
+
+.link-block {
+  display: inline-block;
+  &:hover,
+  &:focus {
+    color: darken( $colorBtn, 15% );
+  }
+}
+
+.link-popover {
+  display: block;
+  position: relative;
+  &:hover,
+  &:focus {
+    .popover-content {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+  }
+  .popover-content {
+    text-align: center;
+    display: block;
+    color: #000;
+    font-size: $fontH4 + 1;
+    @include fontNorthScript();
+    text-transform: lowercase;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(0px);
+    backface-visibility: hidden;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  }
+
+  @include breakpoint(medium) {
+    .popover-content {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+  }
+}

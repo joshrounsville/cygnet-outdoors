@@ -8,7 +8,7 @@
 <?php get_header(); ?>
 
 
-  <section class="bg-gray bg-antlers pad-t pad-b--2x">
+  <section class="bg-gray bg-antlers parallax pad-t pad-b--2x">
     <div class="container">
 
       <div class="row text-center pad-b">
@@ -55,10 +55,12 @@
 
       <div class="row text-center">
         <div class="span12">
-          <h3 class="pad-b--20">Blog</h3>
-          <i class="icon icon-x"></i>
-          <h3 class="curved-text font-script font-large-script">Latest Writings</h3>
-          <i class="icon icon-circle-scene"></i>
+          <a href="<?php echo get_post_type_archive_link( 'portfolio' ); ?>" class="link-block">
+            <h4 class="pad-b--20">Portfolio</h4>
+            <i class="icon icon-x"></i>
+            <img src="<?php echo get_template_directory_uri(); ?>/library/img/structure/text-latest-writings.png" alt="Latest Writings" class="circle-text" width="283" height="73">
+            <i class="icon icon-circle-scene"></i>
+          </a>
         </div>
       </div>
 
@@ -76,44 +78,47 @@
             <div class="left">
               <div class="content-wrap">
                 <h4>Contact</h4>
-                <p class="pad-b--20">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.</p>
-                <form action="#" class="form-contact">
-                  <div class="form-row pad-b--20">
-                    <div class="form-col-left">
-                      <div class="form-row pad-b--20">
-                        <input type="text" placeholder="Your name" class="input-style">
-                      </div>
-                      <div class="form-row">
-                        <input type="email" placeholder="Your email address" class="input-style">
-                      </div>
-                    </div>
-                    <div class="form-col-right">
-                      <div class="form-row">
-                        <textarea name="message" id="message" cols="30" rows="5" placeholder="Message" class="input-style"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-row text-center">
-                    <input type="submit" value="Send" class="btn btn--secondary btn--min-width">
-                  </div>
-                </form>
+                <div class="form-wrap">
+                  <?php the_content(); ?>
+                </div>
               </div>
             </div>
             <div class="right">
               <div class="top">
                 <div class="content-wrap">
-                  <h4>About Bekah Klarr</h4>
-                  <p>A lifelong seeker of new experiences and wild places, since childhood, Bekah had been writing small poems, sketching little drawings, and snapping photos everyday. As she continued to be inspired by rural places and outdoor adventures an idea formed to create a space for her projects and writings.</p>
+                  <h4>Cygnet Outdoors</h4>
+                  <p>Cygnet Outdoors is a source for inspiration centered around the outdoors and adventures big and small. I strive to represent outdoorsmen through my writings and photos. I hope to encourage people to seek the wondrous beauty that surrounds their everyday life.</p>
                   <i class="icon icon-woman-profile-black align-center"></i>
                 </div>
               </div>
               <div class="bottom">
                 <div class="content-wrap">
                   <h4>Connect</h4>
-                  <ul class="list-inline list-spacer-horz text-center">
-                    <li><i class="icon icon-tree-green"></i></li>
-                    <li><i class="icon icon-swan-green"></i></li>
-                    <li><i class="icon icon-coffee-green"></i></li>
+                  <ul class="list-contact-fancy text-center">
+                    <li>
+                      <a href="https://www.facebook.com/cygnetoutdoors" target="_blank" class="link-popover">
+                        <i class="icon icon-facebook-fancy"></i>
+                        <span class="popover-content">Facebook</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/CygnetOutdoors" target="_blank" class="link-popover">
+                        <i class="icon icon-twitter-fancy"></i>
+                        <span class="popover-content">Twitter</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="http://instagram.com/cygnetoutdoors" target="_blank" class="link-popover">
+                        <i class="icon icon-instagram-fancy"></i>
+                        <span class="popover-content">Instagram</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="mailto:bekah@cygnetoutdoor.com" target="_blank" class="link-popover">
+                        <i class="icon icon-email-fancy"></i>
+                        <span class="popover-content">Email</span>
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -123,7 +128,7 @@
         </div>
       </div>
 
-      <div class="row text-center">
+      <div class="row text-center pad-b--20">
         <div class="span12">
           <i class="icon icon-trees-three-green"></i>
           <h4 class="h1 font-script text-yellow">Little by little, one travels far.</h4>

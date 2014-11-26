@@ -7,16 +7,19 @@ header {
   background-repeat: no-repeat;
   background-position: 20% top;
   background-size: cover;
-  background-image: url(../img/backgrounds/header.jpg);
+  background-image: url(../img/backgrounds/home-medium.jpg);
   min-height: 100%;
   .page-template-page-about-php & {
     background-image: url(../img/backgrounds/about.jpg);
   }
-  .blog & {
+  .blog &,
+  .single &,
+  .archive &,
+  .page-template-page-subscribe-php & {
     background-image: none;
     min-height: 1px;
   }
-  .post-type-archive-portfolio & {
+  .post-type-archive & {
     min-height: 0;
     background-image: none;
     background-color: $colorGray;
@@ -25,7 +28,7 @@ header {
   .nav {
     text-transform: uppercase;
     font-size: $fontBase - 1;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     @include fontRegular();
     color: $colorGrayDark;
     a {
@@ -45,11 +48,24 @@ header {
     }
   }
 
+  @include breakpoint(xLarge) {
+    background-image: url(../img/backgrounds/home-large.jpg);
+  }
+
+  @include breakpoint(large) {
+    background-image: url(../img/backgrounds/home-large.jpg);
+  }
+
   @include breakpoint(medium) {
+    background-image: url(../img/backgrounds/home-large.jpg);
     background-position: 35% top;
+    .nav {
+      letter-spacing: 1px;
+    }
   }
 
   @include breakpoint(small) {
+    background-image: url(../img/backgrounds/home-medium.jpg);
     background-position: 45% top;
     min-height: 600px;
     .page-template-page-about-php & {
@@ -121,9 +137,35 @@ header {
   ul {
     float: right;
   }
+  @include breakpoint(medium) {
+    a {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
   @include breakpoint(small) {
     text-align: center;
     float: none;
+    li {
+      padding: 0 10px;
+    }
+    a {
+      padding: 25px 0 1px;
+      border-bottom: 1px solid transparent;
+      &:hover,
+      &:focus {
+        color: $colorGrayDark;
+        background: transparent;
+        border-bottom: 1px solid $colorGrayXDark;
+      }
+    }
+    .current-menu-item {
+      a {
+        color: $colorGrayDark;
+        background: transparent;
+        border-bottom: 1px solid $colorGrayXDark;
+      }
+    }
   }
 }
 

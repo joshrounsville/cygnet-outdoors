@@ -50,10 +50,14 @@
 }
 
 .curved-text {
-  margin-bottom: -15px;
+  margin-bottom: -10px;
   @include breakpoint(medium) {
     margin-bottom: -5px;
   }
+}
+
+.line-height {
+  line-height: 1.8;
 }
 
 
@@ -63,15 +67,12 @@
 .inline-border {
   display: block;
   width: 100%;
-  text-align: right;
   position: relative;
-  padding: 0;
-  font-size: $fontH2;
-  @include fontNorthScript();
+  text-align: center;
   &:before {
     content: " ";
     display: block;
-    background: url(../img/structure/line-distressed-white.png) repeat-x center center;
+    background: url(../img/structure/line-distressed-black.png) repeat-x center center;
     width: 100%;
     height: 2px;
     position: absolute;
@@ -80,28 +81,39 @@
     margin-top: -1px;
     z-index: 1;
   }
-  span {
-    background: $colorGrayXDark;
+  &.inline-border-white {
+    background: url(../img/structure/line-distressed-white.png) repeat-x center center;
+  }
+  &.inline-border-thick {
+    background: url(../img/structure/line-distressed-black-thick.png) repeat-x center center;
+  }
+  i {
     position: relative;
     z-index: 2;
-    padding-left: 15px;
+    background-color: #fffbf3;
+    padding: 0 60px;
+  }
+  .right-align {
+    background: $colorGrayXDark;
+    padding: 0 0 0 10px;
+    position: absolute;
+    top: -6px;
+    right: 0;
+    z-index: 2;
+    @include fontNorthScript();
+    color: $colorYellow;
+    font-size: $fontH3;
     a {
       @include fontNorth();
-      color: $colorWhite;
       font-size: $fontBase;
-      &:hover,
-      &:focus {
-        color: $colorGreen;
-      }
+      margin-left: 8px;
     }
-  }
-  .left-align {
-    padding: 0 15px 0 0;
-    text-align: left;
-    float: left;
   }
 }
 
+.border-top {
+  background: url(../img/structure/line-distressed-white.png) repeat-x top center;
+}
 
 
 
@@ -122,7 +134,12 @@
 .bg-antlers {
   background-image: url(../img/backgrounds/antler-left.png), url(../img/backgrounds/antler-right.png);
   background-repeat: no-repeat;
-  background-position: -55% 50%, 155% 50%;
+  background-position: -3% -20px, 104% -65px;
+
+  @include breakpoint(small) {
+    background-image: url(../img/backgrounds/antler-left.png);
+    background-position: -100px -50px;
+  }
 }
 
 .bg-blog {
@@ -139,7 +156,7 @@
   &.bg-texture {
     background-image: url(../img/backgrounds/texture.png), url(../img/backgrounds/feather.png);
     background-repeat: repeat, no-repeat;
-    background-position: center center, center 97%;
+    background-position: center center, center 96%;
   }
 }
 
@@ -147,6 +164,12 @@
   background-image: url(../img/backgrounds/beat.png);
   background-repeat: repeat;
   background-position: center center;
+}
+
+.bg-footprints {
+  background-image: url(../img/backgrounds/footprints.png);
+  background-repeat: no-repeat;
+  background-position: 99% 3%;
 }
 
 
@@ -227,6 +250,10 @@
   @include breakpoint(small) {
     margin-top: 0;
   }
+}
+
+.relative {
+  position: relative;
 }
 
 

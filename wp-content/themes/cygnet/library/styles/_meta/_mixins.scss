@@ -13,6 +13,7 @@
   font-family: $fontNorth;
   font-style: normal;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 @mixin fontNorthScript() {
@@ -33,6 +34,9 @@
   }
   @else if $point == large {
     @media ( max-width: $large + 20 ) { @content; }
+  }
+  @else if $point == xLarge {
+    @media ( min-width: $large + 21 ) { @content; }
   }
 }
 

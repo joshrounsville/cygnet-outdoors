@@ -2,9 +2,6 @@
   Typography
 ========================================================================== */
 
-html, body, button {
-  -webkit-font-smoothing: antialiased;
-}
 
 html, body {
   height: 100%;
@@ -67,10 +64,7 @@ h6, .h6 {
 }
 
 .font-large-script {
-  font-size: $fontH1*3;
-  @include breakpoint(medium) {
-    font-size: $fontH1*2.5;
-  }
+  font-size: $fontH1*2.5;
   @include breakpoint(medium) {
     font-size: $fontH1*1.6;
   }
@@ -86,6 +80,10 @@ h6, .h6 {
 
 .font-script {
   @include fontNorthScript();
+}
+
+.font-north {
+  @include fontNorth();
 }
 
 .small,
@@ -105,12 +103,8 @@ em {
 
 blockquote {
   color: $colorWhite;
-  font-size: $fontLarge;
   padding: 0;
   margin: 25px 0;
-  &.border-top {
-    background: url(../img/structure/line-distressed-white.png) repeat-x top center;
-  }
   .quote {
     padding: 10px 0 15px;
     text-transform: uppercase;

@@ -582,7 +582,7 @@ AddDefaultCharset utf-8
     # `mod_filter` and can remove the `<IfModule mod_filter.c>` & `</IfModule>`
     # lines as `AddOutputFilterByType` is still in the core directives.
 
-    <IfModule mod_filter.c>
+
         AddOutputFilterByType DEFLATE "application/atom+xml" \
                                       "application/javascript" \
                                       "application/json" \
@@ -605,7 +605,7 @@ AddDefaultCharset utf-8
                                       "text/vtt" \
                                       "text/x-component" \
                                       "text/xml"
-    </IfModule>
+
 
 </IfModule>
 

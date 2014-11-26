@@ -19,10 +19,11 @@
 /**** import components ****/
 @import "_components/buttons", "_components/icons" ,"_components/font-awesome";
 @import "_components/blog-excerpt", "_components/info-box", "_components/portfolio-wrap";
+@import "_components/pagination", "_components/carousel", "_components/comments";
 
 
 /**** import sections ****/
-@import "_sections/nav", "_sections/header", "_sections/footer", "_sections/main";
+@import "_sections/nav", "_sections/header", "_sections/footer", "_sections/main", "_sections/sidebar";
 
 
 /**** import pages ****/
@@ -50,6 +51,6 @@
 
 /*
 
-"_components/carousel"
+
 
 */

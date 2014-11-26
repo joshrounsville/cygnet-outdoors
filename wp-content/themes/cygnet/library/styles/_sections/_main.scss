@@ -3,6 +3,30 @@
 ========================================================================== */
 
 
+.blog,
+.single,
+.archive,
+.page-template-page-subscribe-php {
+  background: url(../img/backgrounds/blog.jpg) no-repeat 20% top;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+  section {
+    background: transparent;
+  }
+
+  @include breakpoint(medium) {
+    background-color: $colorGray;
+    background-size: 100%;
+    background-attachment: initial;
+  }
+}
+
+.post-type-archive {
+  background-image: none;
+  background: $colorGray;
+}
+
 section {
   .row {
     animation: fadeIn 0.3s 0.4s both;

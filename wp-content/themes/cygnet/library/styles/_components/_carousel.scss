@@ -59,10 +59,42 @@
 }
 
 .owl-buttons {
+  padding: 10px 0 0 0;
+  @include clearfix();
   div {
-    display: inline-block;
+    display: block;
     cursor: pointer;
-    margin: 0 5px 0 0;
+  }
+}
+
+.owl-prev,
+.owl-next {
+  float: left;
+  width: 33px;
+  height: 10px;
+  text-indent: -999em;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  &.disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}
+
+.owl-prev {
+  background-image: url(../img/icons/nav-arrow-left.png);
+  &:hover,
+  &:focus {
+    transform: translateX(-3px) rotate(-4deg);
+  }
+}
+
+.owl-next {
+  background-image: url(../img/icons/nav-arrow-right.png);
+  float: right;
+  &:hover,
+  &:focus {
+    transform: translateX(3px) rotate(4deg);
   }
 }
 

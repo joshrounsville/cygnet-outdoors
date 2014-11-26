@@ -5,7 +5,7 @@
 		<div class="container">
 
 			<div class="row">
-				<div class="span8">
+				<div class="span8 offset2 span-l-10 offset-l-1 span-m-12 offset-m-0">
 
 					<div class="blog-excerpt-list">
 
@@ -13,10 +13,11 @@
 						<div class="blog-item">
 
 							<ul class="blog-meta">
-								<li><a href="#"><?php the_time('F j, Y'); ?></a> <span>by</span> <a href="#" class="font-regular"><?php the_author(); ?></a></a></li>
-								<li><span>Filed Under:</span> <?php echo get_the_category_list(); ?></li>
+								<li><span class="font-north"><?php the_time('F j, Y'); ?></span> <span>by</span> <span class="font-regular"><?php the_author(); ?></span></li>
+								<li><span>filed under:</span> <?php echo get_the_category_list(); ?></li>
+								<li><a href="<?php the_permalink(); ?>#comments" class="comments"><?php comments_number(); ?></a></li>
 							</ul>
-							<?php the_post_thumbnail( 'blog-excerpt-large' ); ?>
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'blog-excerpt-large' ); ?></a>
 							<h3><?php the_title(); ?></h3>
 							<?php the_excerpt(); ?>
 							<a href="<?php the_permalink(); ?>" class="btn btn--secondary btn--block">Read More</a>
@@ -24,7 +25,7 @@
 
 						<?php endwhile; endif; ?>
 
-						<ul class="blog-pagination">
+						<ul class="pagination">
 							<?php if ( get_previous_posts_link() ) : ?>
 								<li class="previous">
 									<?php previous_posts_link( '<i class="icon icon-nav-arrow-left"></i> Previous Page' ); ?>
@@ -39,17 +40,6 @@
 
 					</div>
 
-				</div>
-				<div class="span4">
-					<div class="bg-white">
-						<h4>Sidebar</h4>
-						<ul>
-							<li><a href="#">Lorem Ipsum set Dolor</a></li>
-							<li><a href="#">Lorem Ipsum set Dolor</a></li>
-							<li><a href="#">Lorem Ipsum set Dolor</a></li>
-							<li><a href="#">Lorem Ipsum set Dolor</a></li>
-						</ul>
-					</div>
 				</div>
 			</div>
 

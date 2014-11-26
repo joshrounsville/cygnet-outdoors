@@ -8,7 +8,6 @@
   position: relative;
   overflow: hidden;
   background: #000;
-  border: 1px solid $colorGray;
   &:hover,
   &:focus {
     .portfolio-hover-content {
@@ -22,6 +21,11 @@
     bottom: 0;
     left: 0;
     opacity: 0.4;
+    backface-visibility: hidden;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
   h2 {
     @include fontRegular();
@@ -33,6 +37,22 @@
     left: 0;
     z-index: 7;
   }
+
+  @include breakpoint(large) {
+    height: 430px;
+  }
+  @include breakpoint(medium) {
+    height: 340px;
+    &:hover,
+    &:focus {
+      .portfolio-hover-content {
+        opacity: 0;
+      }
+    }
+  }
+  @include breakpoint(small) {
+    height: 350px;
+  }
 }
 
 .portfolio-content,
@@ -43,6 +63,10 @@
   right: 0;
   bottom: 0;
   left: 0;
+
+  @include breakpoint(medium) {
+    padding: 20px 10px;
+  }
 }
 
 .portfolio-content {
@@ -66,6 +90,11 @@
 .portfolio-excerpt_wrap {
   padding-bottom: 20px;
   background: url(../img/structure/line-dotted-white.png) repeat-x bottom center;
+
+  @include breakpoint(large) {
+    overflow: hidden;
+    height: 150px;
+  }
 }
 
 .portfolio-meta {
@@ -79,5 +108,11 @@
   span {
     @include fontNorth();
     padding: 0 5px 0 0;
+  }
+
+  @include breakpoint(medium) {
+    right: 10px;
+    bottom: 60px;
+    left: 10px;
   }
 }

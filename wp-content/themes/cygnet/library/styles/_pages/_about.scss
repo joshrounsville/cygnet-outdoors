@@ -3,13 +3,46 @@
 ========================================================================== */
 
 
-.about-arrow {
+.tag {
   position: absolute;
-  left: 25px;
-  top: -200px;
+  top: -50px;
+  left: 50%;
+  padding: 8px 0;
+  margin: 0 0 0 -130px;
+  width: 260px;
+  background: $colorGrayXDark;
+  text-align: center;
+  vertical-align: middle;
+  color: $colorYellow;
+  i {
+    margin: 0 0 0 7px;
+    position: relative;
+    bottom: -5px;
+  }
+
+  @include breakpoint(small) {
+    width: 100%;
+    left: 0;
+    margin: 0;
+  }
 }
 
-.about-arrow-right {
-  right: 25px;
-  left: auto;
+.dropcap {
+  float: left;
+  margin: 0 20px 0 0;
+
+  @include breakpoint(small) {
+    margin: 10px 15px 5px 0;
+  }
+}
+
+.highlight {
+  font-size: $fontH3;
+  line-height: 1.5;
+  display: block;
+  @include breakpoint(large) {
+    font-size: $fontLarge;
+    display: inline;
+    line-height: $lineHeight;
+  }
 }

@@ -10,41 +10,52 @@ if ( post_password_required() ) {
 
 ?>
 
-<?php // You can start editing here. ?>
+  <div class="comment-wrap" id="comments">
+
+  <?php
+    $fields =  array(
+    'author' =>
+      '<div class="form-third first"><label for="author">' . __( 'Name', 'domainreference' ) . '</label> ' .
+      ( $req ? '<span class="required">(Required)</span>' : '' ) .
+      '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . '></div>',
+
+    'email' =>
+      '<div class="form-third second"><label for="email">' . __( 'Email', 'domainreference' ) . '</label> ' .
+      ( $req ? '<span class="required">(Required but not shared)</span>' : '' ) .
+      '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+      '" size="30"' . $aria_req . '></div>',
+
+    'url' =>
+      '<div class="form-third third"><label for="url">' . __( 'Website', 'domainreference' ) . '</label>' .
+      '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+      '" size="30"></div>',
+    );
+  ?>
+  <?php
+    comment_form( array(
+      'comment_notes_after' => '',
+      'label_submit' => 'Submit',
+      'comment_notes_before' => '',
+      'title_reply' => '',
+      'fields' => $fields,
+      'comment_field' => '<div class="form-full"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" aria-required="true"></textarea></div>'
+    ) );
+  ?>
 
   <?php if ( have_comments() ) : ?>
-
-    <h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'bonestheme' ), __( '<span>One</span> Comment', 'bonestheme' ), __( '<span>%</span> Comments', 'bonestheme' ) );?></h3>
-
-    <section class="commentlist">
-      <?php
-        wp_list_comments( array(
-          'style'             => 'div',
-          'short_ping'        => true,
-          'avatar_size'       => 40,
-          'callback'          => 'bones_comments',
-          'type'              => 'all',
-          'reply_text'        => 'Reply',
-          'page'              => '',
-          'per_page'          => '',
-          'reverse_top_level' => null,
-          'reverse_children'  => ''
-        ) );
-      ?>
-    </section>
-
-    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-    	<nav class="navigation comment-navigation" role="navigation">
-      	<div class="comment-nav-prev"><?php previous_comments_link( __( '&larr; Previous Comments', 'bonestheme' ) ); ?></div>
-      	<div class="comment-nav-next"><?php next_comments_link( __( 'More Comments &rarr;', 'bonestheme' ) ); ?></div>
-    	</nav>
-    <?php endif; ?>
-
-    <?php if ( ! comments_open() ) : ?>
-    	<p class="no-comments"><?php _e( 'Comments are closed.' , 'bonestheme' ); ?></p>
-    <?php endif; ?>
-
+    <?php
+      wp_list_comments( array(
+        'style'             => 'div',
+        'short_ping'        => true,
+        'avatar_size'       => 0,
+        'callback'          => 'bones_comments',
+        'type'              => 'all',
+        'reply_text'        => 'Reply',
+        'page'              => '',
+        'per_page'          => '',
+        'reverse_top_level' => null,
+        'reverse_children'  => ''
+      ) );
+    ?>
   <?php endif; ?>
-
-  <?php comment_form(); ?>
-
+  </div>

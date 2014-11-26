@@ -11,8 +11,8 @@
 
 .icon-arrow-down {
   background-image: url(../img/icons/arrow-down.png);
-  width: 19px;
-  height: 93px;
+  width: 8px;
+  height: 26px;
 }
 
 .icon-circle-scene {
@@ -33,10 +33,44 @@
   height: 83px;
 }
 
+.icon-drop-c {
+  background-image: url(../img/icons/drop-c.png);
+  width: 98px;
+  height: 86px;
+
+  @include breakpoint(small) {
+    width: 60px;
+    height: 54px;
+    background-size: 100%;
+  }
+}
+
+.icon-email-fancy {
+  background-image: url(../img/icons/email-fancy.png);
+  width: 38px;
+  height: 91px;
+
+  @include breakpoint(small) {
+    width: 32px;
+    background-size: 100%;
+  }
+}
+
 .icon-facebook {
   background-image: url(../img/icons/facebook.png);
   width: 10px;
   height: 22px;
+}
+
+.icon-facebook-fancy {
+  background-image: url(../img/icons/facebook-fancy.png);
+  width: 48px;
+  height: 65px;
+
+  @include breakpoint(small) {
+    width: 40px;
+    background-size: 100%;
+  }
 }
 
 .icon-google-plus {
@@ -51,14 +85,37 @@
   height: 71px;
 }
 
+.icon-instagram {
+  background-image: url(../img/icons/instagram.png);
+  width: 50px;
+  height: 50px;
+}
+
+.icon-instagram-fancy {
+  background-image: url(../img/icons/instagram-fancy.png);
+  width: 52px;
+  height: 50px;
+
+  @include breakpoint(small) {
+    width: 45px;
+    background-size: 100%;
+  }
+}
+
 .icon-pen-black {
   background-image: url(../img/icons/pen-black.png);
-  width: 97px;
+  width: 75px;
   height: 59px;
 }
 
 .icon-nav-arrow-left {
   background-image: url(../img/icons/nav-arrow-left.png);
+  width: 33px;
+  height: 10px;
+}
+
+.icon-nav-arrow-left-white {
+  background-image: url(../img/icons/nav-arrow-left-white.png);
   width: 33px;
   height: 10px;
 }
@@ -69,10 +126,16 @@
   height: 10px;
 }
 
+.icon-nav-arrow-right-white {
+  background-image: url(../img/icons/nav-arrow-right-white.png);
+  width: 33px;
+  height: 10px;
+}
+
 .icon-swan-black {
   background-image: url(../img/icons/swan-black.png);
-  width: 67px;
-  height: 53px;
+  width: 60px;
+  height: 47px;
 }
 
 .icon-swan-green {
@@ -99,16 +162,33 @@
   height: 45px;
 }
 
+.icon-trees-three-black {
+  background-image: url(../img/icons/trees-three-black.png);
+  width: 86px;
+  height: 53px;
+}
+
 .icon-trees-three-green {
   background-image: url(../img/icons/trees-three-green.png);
-  width: 98px;
-  height: 60px;
+  width: 86px;
+  height: 53px;
 }
 
 .icon-twitter {
   background-image: url(../img/icons/twitter.png);
   width: 22px;
   height: 16px;
+}
+
+.icon-twitter-fancy {
+  background-image: url(../img/icons/twitter-fancy.png);
+  width: 47px;
+  height: 44px;
+
+  @include breakpoint(small) {
+    width: 42px;
+    background-size: 100%;
+  }
 }
 
 .icon-woman-profile-black {

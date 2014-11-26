@@ -1,21 +1,19 @@
-				<div id="sidebar1" class="sidebar m-all t-1of3 d-2of7 last-col cf" role="complementary">
+				<div class="sidebar">
+
+          <div class="widget">
+            <h4>Subscribe</h4>
+            <form action="#">
+              <input type="email" placeholder="Enter Your Email" class="subscribe-field">
+              <input type="submit" value="submit" class="subscribe-submit">
+            </form>
+          </div>
 
 					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 
 						<?php dynamic_sidebar( 'sidebar1' ); ?>
 
-					<?php else : ?>
-
-						<?php
-							/*
-							 * This content shows up if there are no widgets defined in the backend.
-							*/
-						?>
-
-						<div class="no-widgets">
-							<p><?php _e( 'This is a widget ready area. Add some and they will appear here.', 'bonestheme' );  ?></p>
-						</div>
-
 					<?php endif; ?>
+
+          <p class="copyright">&copy; <?php echo date("Y") ?> Cygnet Outdoors</p>
 
 				</div>

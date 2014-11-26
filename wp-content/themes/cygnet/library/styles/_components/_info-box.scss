@@ -8,15 +8,12 @@
   display: flex;
   align-items: stretch;
   .left {
-    width: 70%;
+    width: 65%;
     background: $colorGray url(../img/backgrounds/feathers-three.png) center center;
     color: $colorWhite;
-    .content-wrap {
-      padding: 25px 60px;
-    }
   }
   .right {
-    width: 30%;
+    width: 35%;
     background: $colorGreenDark;
   }
   .top {
@@ -28,37 +25,45 @@
       color: $colorYellow;
       padding: 0;
     }
-    .icon-coffee-green {
-      position: relative;
-      bottom: -10px;
-    }
   }
   h4 {
     text-align: center;
-    padding: 0 0 12px;
+    padding: 0 0 10px;
+  }
+  .form-wrap {
+    padding: 30px 0 0 0;
   }
   .content-wrap {
-    padding: 25px 20px;
+    padding: 20px 40px;
     p {
-      line-height: 1.3;
+      line-height: 1.2;
+      text-align: justify;
     }
   }
 
+  @include breakpoint(large) {
+    .form-wrap {
+      padding: 40px 0 0 0;
+    }
+    .content-wrap {
+      padding: 20px 30px;
+    }
+  }
   @include breakpoint(medium) {
     .left {
-      width: 60%;
-      .content-wrap {
-        padding: 15px 20px;
-      }
+      width: 55%;
     }
     .right {
-      width: 40%;
+      width: 45%;
     }
     h4 {
       padding: 0 0 10px;
     }
+    .form-wrap {
+      padding: 0;
+    }
     .content-wrap {
-      padding: 15px 20px;
+      padding: 20px;
     }
   }
   @include breakpoint(small) {
@@ -73,8 +78,46 @@
         padding: 20px;
       }
     }
+    .right {
+      padding-bottom: 10px;
+    }
     .content-wrap {
       padding: 20px;
+    }
+  }
+}
+
+
+.list-contact-fancy {
+  position: relative;
+  margin: -20px -20px 0;
+  li {
+    display: inline-block;
+    margin: 0 20px;
+  }
+  .icon-twitter-fancy {
+    position: relative;
+    top: -8px;
+  }
+  .icon-instagram-fancy {
+    position: relative;
+    top: -4px;
+  }
+  .icon-email-fancy {
+    position: relative;
+    bottom: -5px;
+  }
+
+  @include breakpoint(large) {
+    margin: -20px -10px 0;
+    li {
+      margin: 0 10px;
+    }
+  }
+  @include breakpoint(small) {
+    margin: -20px -10px 0;
+    li {
+      margin: 0 10px;
     }
   }
 }

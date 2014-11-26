@@ -1,0 +1,184 @@
+/* ==========================================================================
+  Comments
+========================================================================== */
+
+
+.comment-wrap {
+  margin: 10px 0 0 0;
+}
+
+.comment-meta {
+  padding: 0 0 5px;
+  @include fontNorth();
+  li {
+    display: inline-block;
+    margin: 0 8px 0 0;
+  }
+  .author {
+    color: $colorRed;
+  }
+  .comment-text {
+    @include fontNorthScript();
+    text-transform: lowercase;
+    font-size: $fontH3;
+  }
+}
+
+.comment-edit-link {
+  margin-right: 5px;
+  font-size: $fontSmall;
+  color: $colorGrayLight;
+  &:hover,
+  &:focus {
+    color: $colorGray;
+  }
+}
+
+.logged-in-as {
+  font-size: $fontLarge;
+  padding: 0;
+  a {
+    color: $colorGray;
+    &:hover,
+    &:focus {
+      color: $colorGreen;
+    }
+  }
+}
+
+.comment-reply-title {
+  font-size: $fontH3;
+  padding: 0 0 20px;
+  a {
+    &:hover,
+    &:focus {
+      color: $colorGreen;
+    }
+  }
+  small {
+    text-transform: lowercase;
+  }
+}
+
+.comment-single {
+  background: url(../img/structure/line-distressed-gray.png) repeat-x top center;
+  margin: 10px 0 0 0;
+  padding: 25px 0 0 0;
+  .comment-single {
+    background: none;
+    margin: 0;
+    padding: 0 0 0 40px;
+    .comment-single {
+      padding: 0 0 80px;
+      .comment-single {
+        padding: 0 0 120px;
+      }
+    }
+  }
+}
+
+.comment-reply-link {
+  @include fontNorth();
+  position: relative;
+  top: -12px;
+  font-size: $fontSmall;
+  &:hover,
+  &:focus {
+    color: $colorRed;
+  }
+}
+
+.comment-respond {
+  background: url(../img/structure/line-distressed-gray.png) repeat-x top center;
+  @include clearfix();
+  padding: 30px 0 20px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, height 0.3s 0.3s ease-in-out;
+  &.show {
+    height: 344px;
+    opacity: 1;
+    transition: opacity 0.3s 0.3s ease-in-out, height 0.35s ease-in-out;
+  }
+  input[type=text], input[type=email], textarea {
+    border: none;
+    outline: 0;
+    background: #fffbf3;
+    border: 1px solid $colorGrayXDark;
+    display: block;
+    width: 100%;
+    color: $colorGray;
+    @include fontRegular();
+    padding: 7px 12px;
+    transition: border 0.2s ease-in-out;
+    &:hover,
+    &:focus {
+      border: 1px solid $colorGreen;
+    }
+  }
+  textarea {
+    height: 120px;
+  }
+  input[type=submit] {
+    border: none;
+    outline: 0;
+    @extend .btn;
+    @extend .btn--secondary;
+    float: right;
+    margin: 20px 0 0 0;
+  }
+  .form-third {
+    width: 33.3333333%;
+    float: left;
+    &.first {
+      padding: 0 20px 0 0;
+    }
+    &.second {
+      padding: 0 10px;
+    }
+    &.third {
+      padding: 0 0 0 20px;
+    }
+  }
+  .form-full {
+    clear: both;
+    padding: 20px 0 0 0;
+  }
+  label {
+    @include fontNorth();
+    font-size: $fontSmall;
+    padding: 0 0 5px;
+    display: inline-block;
+  }
+  .required {
+    @include fontNorthScript();
+    color: $colorRed;
+    font-size: $fontH4;
+    padding-left: 5px;
+    line-height: 0;
+  }
+
+  @include breakpoint(small) {
+    &.show {
+      height: 490px;
+    }
+    .form-third {
+      width: 100%;
+      float: none;
+      padding: 0 0 15px;
+      &.first {
+        padding: 0 0 15px;
+      }
+      &.second {
+        padding: 0 0 15px;
+      }
+      &.third {
+        padding: 0 0 15px;
+      }
+    }
+    .form-full {
+      padding: 0;
+    }
+  }
+}

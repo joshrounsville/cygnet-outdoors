@@ -1,0 +1,50 @@
+/* ==========================================================================
+  Pagination
+========================================================================== */
+
+
+.pagination {
+  position: relative;
+  bottom: -65px;
+  display: block;
+  text-transform: uppercase;
+  @include clearfix();
+  .previous {
+    float: left;
+    a {
+      &:hover,
+      &:focus {
+        i {
+          transform: translateX(-3px) rotate(-4deg);
+        }
+      }
+    }
+    i {
+      margin-right: 3px;
+    }
+  }
+  .next {
+    float: right;
+    a {
+      &:hover,
+      &:focus {
+        i {
+          transform: translateX(3px) rotate(4deg);
+        }
+      }
+    }
+    i {
+      margin-left: 3px;
+    }
+  }
+  i {
+    transition: transform 0.2s ease-in-out;
+  }
+}
+
+.pagination-portfolio {
+  bottom: 0;
+  a {
+    color: $colorWhite;
+  }
+}

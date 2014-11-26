@@ -7,11 +7,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title><?php wp_title(''); ?></title>
+    <title><?php wp_title('-', '-', right); ?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/library/img/structure/favicon.png">
+    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/library/img/touch/favicon.png">
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -42,9 +42,10 @@
             <nav class="nav nav-social">
               <ul>
                 <li>Connect</li>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="https://www.facebook.com/cygnetoutdoors" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/CygnetOutdoors" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="http://www.pinterest.com/CygnetOutdoors/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                <li><a href="http://instagram.com/cygnetoutdoors" target="_blank"><i class="fa fa-instagram"></i></a></li>
               </ul>
             </nav>
             <nav class="nav nav-main">
@@ -74,9 +75,6 @@
               <img src="<?php echo get_template_directory_uri(); ?>/library/img/logos/cygnet-outdoors.png" alt="Cygnet Outdoors" width="208" height="125">
               <?php endif; ?>
             </a>
-            <?php if ( is_page( 'about' ) ) : ?>
-              <h4 class="text-uppercase font-regular pad-t--10">About Bekah Klarr</h4>
-            <?php endif; ?>
           </div>
         </div>
 

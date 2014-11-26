@@ -87,43 +87,45 @@ input::-moz-focus-inner {
 .input-style {
   outline: 0;
   border: none;
+  border: 1px solid #fafff3;
   background: #fafff3;
-  @include fontRegular();
-  transition: background 0.14s ease-in-out;
   color: $colorGrayDark;
-  @include placeholder($colorGrayDark);
-  padding: 15px;
+  padding: 16px 15px;
   font-size: $fontSmall;
   display: block;
   width: 100%;
+  @include fontRegular();
+  @include placeholder($colorGrayDark);
+  transition: background 0.14s ease-in-out, border 0.14s ease-in-out;
   &:hover,
   &:focus {
     background: $colorWhite;
+    border-color: $colorWhite;
+  }
+  &.wpcf7-not-valid {
+    border: 1px solid $colorRed;
   }
 }
 
 textarea {
   &.input-style {
-    height: 116px;
+    height: 118px;
   }
 }
 
 .form-row {
+  position: relative;
   @include clearfix();
-
-  @include breakpoint(small) {
-    padding-bottom: 20px;
-  }
 }
 
 .form-col-left {
   width: 50%;
   float: left;
   padding-right: 10px;
-  @include breakpoint(small) {
+  @include breakpoint(medium) {
     width: 100%;
     float: none;
-    padding: 0;
+    padding: 0 0 20px;
   }
 }
 
@@ -131,11 +133,61 @@ textarea {
   width: 50%;
   float: right;
   padding-left: 10px;
-  @include breakpoint(small) {
+  @include breakpoint(medium) {
     width: 100%;
     float: none;
     padding: 0;
   }
+}
+
+
+
+///// form plugin overrides
+
+div.wpcf7-response-output {
+  border: none;
+  margin: 0;
+  padding: 20px 0 0 0;
+  text-align: center;
+}
+
+span.wpcf7-form-control-wrap {
+  display: block;
+  width: 100%;
+  @include clearfix();
+}
+
+span.wpcf7-not-valid-tip {
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  color: $colorRed;
+  font-size: $fontSmall - 2;
+  padding: 5px 0 0 0;
+  width: 100%;
+  display: block;
+  animation: fadeIn .16s both;
+}
+
+div.wpcf7-response-output {
+  animation: fadeIn .5s both;
+  position: relative;
+  padding: 0;
+  bottom: -15px;
+
+  @include breakpoint(small) {
+    bottom: 0;
+  }
+}
+
+.ajax-loader {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  margin-top: -8px;
+  margin-right: -40px;
 }
 
 

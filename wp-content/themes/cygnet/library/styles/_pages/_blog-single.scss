@@ -1,3 +1,151 @@
 /* ==========================================================================
   Blog Single
 ========================================================================== */
+
+
+.blog-post {
+  background: #fffbf3;
+  padding: $padding;
+  position: relative;
+  h1 {
+    padding: 0 0 5px;
+  }
+
+  @include breakpoint(small) {
+    padding: 20px;
+  }
+}
+
+.post {
+  padding: 20px 0 0 0;
+  h2, h3, h4, h5, h6 {
+    @include fontNorth();
+    padding: 0 0 15px;
+  }
+  h4 {
+    text-align: center;
+  }
+  h4, h5 {
+    padding: 0 0 10px;
+  }
+  h6 {
+    padding: 10px 0;
+  }
+  p {
+    padding: 0 0 20px;
+  }
+}
+
+.blog-interact-single {
+  text-align: center;
+  display: block;
+  padding: 20px 0 0 0;
+  @include fontNorth();
+  li {
+    display: inline-block;
+    margin: 0 12px;
+    vertical-align: middle;
+  }
+  a {
+    &:hover,
+    &:focus {
+      color: $colorRed;
+    }
+  }
+}
+
+.blog-meta-single {
+  text-align: center;
+  color: $colorRed;
+  li {
+    display: inline-block;
+    margin: 0 5px;
+    &:after {
+      content: ", ";
+    }
+    &:last-of-type {
+      &:after {
+        content: " ";
+        display: none;
+      }
+    }
+  }
+  a {
+    color: $colorRed;
+    font-size: $fontH3;
+    text-transform: lowercase;
+    @include fontNorthScript();
+    &:hover,
+    &:focus {
+      color: $colorGrayDark;
+    }
+  }
+}
+
+.post-slider-img-wrap {
+  width: 100%;
+  height: 330px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  img {
+    margin: 0;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @include breakpoint(large) {
+    height: 340px;
+  }
+  @include breakpoint(medium) {
+    height: 315px;
+  }
+  @include breakpoint(small) {
+    height: auto;
+  }
+}
+
+.post-slider {
+  margin-bottom: 10px;
+  .item {
+    background: $colorGrayXDark;
+  }
+  img {
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+    margin: 0;
+    backface-visibility: hidden;
+    &:hover,
+    &:focus,
+    &.active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.share-wrap {
+  padding: 20px 0 0 0;
+  text-align: center;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 15;
+  transition: height 0.3s 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  &.show {
+    height: 51px;
+    opacity: 1;
+    overflow: visible;
+    transition: height 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out;
+  }
+  .button {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+  .facebook {
+    position: relative;
+    top: -4px;
+  }
+  iframe {
+    max-width: none;
+  }
+}
