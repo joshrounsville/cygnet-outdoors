@@ -82,6 +82,18 @@
   }
 }
 
+.wp-caption {
+  width: auto !important;
+  img {
+    margin: 0 0 3px;
+  }
+}
+
+.wp-caption-text {
+  @include fontNorth();
+  font-size: $fontH6;
+}
+
 .post-slider-img-wrap {
   width: 100%;
   height: 330px;
