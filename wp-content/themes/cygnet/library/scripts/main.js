@@ -157,11 +157,37 @@ $(function() {
   toggleBlogComments();
 
 
+  var showBlogComments = function() {
+    var btn = $('.scroll-link');
+    var commentRespond = $('.comment-respond');
+
+    btn.on('touchstart click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      if ( !$(commentRespond).hasClass('show') ) {
+        $(commentRespond).addClass('show');
+      }
+
+      var target = $(this).attr('href');
+      var position = $(target).offset().top;
+
+      $('html, body').animate({
+        scrollTop: position
+      }, 500);
+
+    });
+
+  };
+
+  showBlogComments();
+
+
   var replyCommentShow = function() {
     var hash = window.location.hash;
     var commentRespond = $('.comment-respond');
 
-    if ( hash === '#respond' ) {
+    if ( hash === '#respond' || hash === '#comments' ) {
       $(commentRespond).addClass('show');
     }
 
