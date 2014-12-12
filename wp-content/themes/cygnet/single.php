@@ -25,7 +25,7 @@
 									$size = 'blog-excerpt-large';
 									$thumb = $image['sizes'][ $size ];
 								?>
-									<div class="item"><img src="<?php echo $thumb; ?>" alt="Cygnet Outdoors"></div>
+									<div class="item"><img src="<?php echo $thumb; ?>" alt="Cygnet Outdoors" class="no-pin"></div>
 								<?php endwhile; ?>
 							</div>
 							<?php else : ?>

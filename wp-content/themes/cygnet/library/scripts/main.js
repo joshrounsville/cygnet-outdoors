@@ -123,9 +123,12 @@ $(function() {
 
         $('<img>', {
           'src' : src,
-          'alt' : 'Cygnet Outdoors'
+          'alt' : 'Cygnet Outdoors',
+          'class' : 'selected'
         }).appendTo(imgWrap);
 
+        $(imgWrap).find('.pin-wrap').remove();
+        $('.selected').wrap('<span class="pin-wrap"></span>');
         img.removeClass('active');
         $(this).addClass('active');
       }
@@ -228,6 +231,49 @@ $(function() {
 
   if ( body.hasClass('single') ) {
     shareGo();
+  }
+
+
+
+  //////// pin it action
+
+  var pinIt = function() {
+
+    var img = $('.blog-post');
+    var url = window.location.href;
+    var description = $(document).find('title').text();
+    var imgSrc;
+    var pin;
+
+    var wrap = img.find('img');
+
+    wrap.each(function() {
+
+      if ( !$(this).parents('.owl-item').length ) {
+        $(this).wrap('<span class="pin-wrap"></span>');
+      }
+
+    });
+
+
+    img.on('click', '.pin-wrap', function(e) {
+
+      if ( !$(this).hasClass('no-pin') ) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        imgSrc = $(this).find('img').attr('src');
+
+        pin = 'http://pinterest.com/pin/create/button/?url=' + url + '&amp;media=' + imgSrc + '&amp;description=' + description;
+        window.open(pin, 'pinterest', 'screenX=100,screenY=100,height=340,width=730');
+      }
+
+    });
+
+  };
+
+  if ( isDesktop ) {
+    pinIt();
   }
 
 

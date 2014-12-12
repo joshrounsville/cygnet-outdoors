@@ -21,7 +21,7 @@
         </div>
       </div>
 
-      <?php $query = new WP_Query( array('posts_per_page' => 3, 'category_name' => 'featured') ); ?>
+      <?php $query = new WP_Query( array('posts_per_page' => 3) ); ?>
       <?php if ( $query->have_posts() ) : ?>
       <?php $i = 1; ?>
       <div class="row">
